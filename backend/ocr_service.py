@@ -96,7 +96,7 @@ def _parse_passport_text(line_to_extract: str) -> Dict[str, Optional[str]]:
     }
     s = line_to_extract.replace(' ', '').replace('«', '<')
     line2_pattern = re.compile(
-        r'([A-Z0-9<]{9})'    # Group 1: Passport Number
+        r'([A-Z0-9<]{9})'   # Group 1: Passport Number
         r'([0-9<]{1})'      # Group 2: Passport Check Digit
         r'(FRA)'            # Group 3: Nationality
         r'([0-9<]{6})'      # Group 4: Date of Birth
